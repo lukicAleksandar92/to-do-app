@@ -11,7 +11,7 @@ export class TodosComponent implements OnInit {
   
   todos!:Todo[];
 
-  inputTodo: string = "";
+  inputTodo!: string;
 
   constructor() { }
 
@@ -34,19 +34,21 @@ export class TodosComponent implements OnInit {
   }
 
     deleteToDo(id: number) {
+      if (confirm('Are you sure')) {
       this.todos = this.todos.filter((v, i) => i !== id)
+      }
     }
 
     addTodo() {
-      this.todos.push({
-        content: this.inputTodo,
-        completed: false
-      })
-      this.inputTodo = '';
-
+      if (this.inputTodo === undefined || this.inputTodo === '') {
+        alert(`You can't add an empty todo`);
+      } else {
+        this.todos.push({
+          content: this.inputTodo,
+          completed: false
+        });
+      }
     }
 
   
-
-
 }

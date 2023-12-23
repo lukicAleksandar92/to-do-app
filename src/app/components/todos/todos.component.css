@@ -45,12 +45,23 @@
 	border: none;
 	outline: none;
 	background: none;
+	border-radius: 20px;
 
-	background-color: #FE4880;
+	background-color: #4875fe;
 	color: #FFF;
 	margin: 15px auto;
 
 	padding: 10px 15px;
 	font-size: 18px;
 	font-weight: 700;
+}
+
+.delete {
+	background-color: #FE4880;
+	color: #FFF;
+	padding: 5px 7.5px;
+	appearance: none;
+	border: none;
+	outline: none;
+	border-radius: 20px;
 }
